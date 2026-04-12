@@ -1,0 +1,124 @@
+.hero-page {
+    --ink: #1b2630;
+    --sand: #f4efe6;
+    --accent: #d44f3d;
+    --accent-dark: #a3392b;
+    --panel: #fffaf2;
+    --line: #d9c8b7;
+    font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+    color: var(--ink);
+    background:
+        radial-gradient(circle at 90% 10%, #ffe3c9 0, #ffe3c900 34%),
+        radial-gradient(circle at 10% 80%, #ffd2c8 0, #ffd2c800 32%),
+        linear-gradient(145deg, #f8f4ec, #f0e7da);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 1.4rem;
+    box-shadow: 0 8px 24px rgba(25, 25, 25, 0.08);
+}
+
+.hero-card h2,
+.feature-card h3,
+.map-card h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: 0.2px;
+}
+
+.eyebrow {
+    display: inline-block;
+    margin: 0 0 0.4rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 0.85rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(90deg, var(--accent-dark), var(--accent));
+    border-radius: 999px;
+}
+
+.hero-card p {
+    line-height: 1.55;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.feature-card {
+    grid-column: span 4;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.feature-card ul {
+    padding-left: 1.1rem;
+    margin: 0.6rem 0 0;
+}
+
+.hint {
+    margin: 0.4rem 0 0.7rem;
+    color: #6a5a49;
+    font-size: 0.92rem;
+}
+
+video,
+.video-wrap iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+    display: block;
+}
+
+.video-wrap {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid var(--line);
+    background: #000;
+}
+
+.map-card {
+    margin-top: 1rem;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.map-wrap {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 0.6rem;
+}
+
+.map-wrap iframe {
+    display: block;
+    width: 100%;
+    min-height: 280px;
+    border: 0;
+}
+
+@media (max-width: 1000px) {
+    .feature-card {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 700px) {
+    .hero-page {
+        padding: 1rem;
+    }
+
+    .feature-card {
+        grid-column: span 12;
+    }
+
+    .map-wrap iframe {
+        min-height: 220px;
+    }
+}
