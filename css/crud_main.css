@@ -1,0 +1,8 @@
+.crud-page .table td,
+.crud-page .table th {
+    vertical-align: middle;
+}
+
+.crud-actions {
+    white-space: nowrap;
+}
